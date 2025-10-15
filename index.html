@@ -6,128 +6,643 @@
     <title>Portfolio - SamuelDev</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <script defer src="script.js"></script>
-</head>
-<body>
-    <header class="navbar">
-        <div class="logo">Samuel<span>Bonnet</span></div>
-        <nav class="nav-links">
-            <a href="#about">À propos</a>
-            <a href="#skills">Compétences</a>
-            <a href="#projects">Projets</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <button class="burger" id="burger" aria-label="Ouvrir le menu">☰</button>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo"><i class="fas fa-code"></i> Samuel Bonnet</a>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Accueil</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <!-- HERO -->
-        <section class="hero">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
             <div class="hero-content">
-                <h1>💻 Développement web moderne & application</h1>
+                <h1>Développeur <br>Full-Stack</h1>
+                <p>Étudiant en Informatique IUT Lens</p>
+                <p>Recherche une alternance</p>
+                <div class="hero-btns">
+                    <a href="#portfolio" class="btn">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-outline">Me contacter</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-animation">
+            <div class="floating-card">
+                <i class="fas fa-code"></i>
+                <span>Code Propre</span>
+            </div>
+            <div class="floating-card">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Responsive</span>
+            </div>
+            <div class="floating-card">
+                <i class="fas fa-rocket"></i>
+                <span>Performance</span>
+            </div>
+        </div>
+    </section>
 
-                <p>Développeur Full-Stack junior passionné, je recherche activement une alternance.</p>
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+            <p class="section-subtitle">Découvrez une sélection de mes réalisations les plus récentes, alliant design moderne et fonctionnalités avancées.</p>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="java">Java</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn" data-filter="php">PHP</button>
+                <button class="filter-btn" data-filter="algorithme">Algorithme</button>
+                <button class="filter-btn" data-filter="c">C</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Projets seront ajoutés dynamiquement -->
+            </div>
+        </div>
+    </section>
 
-                <!-- Carte CV -->
-                <div class="cv-card">
-                    <div class="cv-info">
-                        <h3>📄 Mon CV</h3>
-                        <p>Découvrez mon parcours et mes compétences détaillées.</p>
-                        <a href="CV_Samuel.pdf" download class="btn-cv">Télécharger</a>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <p class="section-subtitle">Développeur passionné, toujours à la recherche de nouveau projet à faire.</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Mon Parcours</h2>
+                    <p>Je suis actuellement étudiant en 2ᵉ année d'informatique à l'IUT de Lens (62), où je me spécialise dans le développement web et la programmation orientée objet. Passionné par les technologies numériques, j'aime transformer des idées en projets concrets, qu'il s'agisse de sites web, d'applications ou de petits programmes.</p>
+                    <p>Curieux et motivé, je cherche constamment à apprendre de nouvelles compétences et à relever des défis techniques pour enrichir mon parcours et mes expériences.</p>
+
+                    <p></p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Projets réalisés</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Années d'expérience</p>
+                        </div>
+                        <div class="stat">
+                            <h3>30+</h3>
+                            <p>Clients satisfaits</p>
+                        </div>
+                        <div class="stat">
+                            <h3>15+</h3>
+                            <p>Technologies maîtrisées</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-img">
+                    <img src="img/pdp.jpg" title="Photo de profil">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Mes Compétences</h2>
+            <p class="section-subtitle">Un panorama non exaustif de mes compétences techniques et des technologies que je maîtrise.</p>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Frontend</h3>
+                    <div class="skill-bubbles">
+                        <div class="skill-bubble">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <span class="skill-name">HTML5</span>
+                        </div>
+                        <div class="skill-bubble">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <span class="skill-name">CSS3</span>
+                        </div>
+                        <div class="skill-bubble">
+                            <div class="skill-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <span class="skill-name">JavaScript</span>
+                        </div>
+                        <div class="skill-bubble">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <span class="skill-name">React</span>
+                        </div>
+                        <div class="skill-bubble">
+                            <div class="skill-icon">
+                                <i class="fab fa-vuejs"></i>
+                            </div>
+                            <span class="skill-name">Vue.js</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skill-bubbles">
+                        <div class="skill-bubble">
+                            <div class="skill-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <span class="skill-name">Java</span>
+                        </div>
+                        <div class="skill-bubble">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <span class="skill-name">Python</span>
+                        </div>
+                        <div class="skill-bubble">
+                            <div class="skill-icon">
+                                <i class="fab fa-php"></i>
+                            </div>
+                            <span class="skill-name">PHP</span>
+                        </div>
+                        <div class="skill-bubble">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span class="skill-name">PostgreSQL</span>
+                        </div>
+                        <div class="skill-bubble">
+                            <div class="skill-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <span class="skill-name">SQLite</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Framework</h3>
+                    <div class="skill-bubbles">
+                        <div class="skill-bubble">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i> <!-- React -->
+                            </div>
+                            <span class="skill-name">React</span>
+                        </div>
+                        <div class="skill-bubble">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i> <!-- JavaFX (pas de logo officiel, icône générique) -->
+                            </div>
+                            <span class="skill-name">Java-FX</span>
+                        </div>
+                        <div class="skill-bubble">
+                            <div class="skill-icon">
+                                <i class="fas fa-leaf"></i> <!-- Spring (icône générique 'leaf') -->
+                            </div>
+                            <span class="skill-name">Spring</span>
+                        </div>
+                        <div class="skill-bubble">
+                            <div class="skill-icon">
+                                <i class="fab fa-laravel"></i> <!-- Laravel (nécessite kit officiel ou image si pas dispo) -->
+                            </div>
+                            <span class="skill-name">Laravel</span>
+                        </div>
+                        <div class="skill-bubble">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i> <!-- Django (pas de logo, on met Python) -->
+                            </div>
+                            <span class="skill-name">Django</span>
+                        </div>
+                        <div class="skill-bubble">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i> <!-- Flask (idem, Python) -->
+                            </div>
+                            <span class="skill-name">Flask</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-<!-- ABOUT -->
-<section id="about" class="about">
-    <div class="about-container">
-        <div class="about-img">
-            <img src="https://via.placeholder.com/300x300" alt="Photo de Samuel, développeur">
         </div>
-        <div class="about-text">
-            <h2>À propos de moi</h2>
-            <p>Développeur full-stack passionné par la création de solutions web modernes, performantes et élégantes. Je transforme des idées en projets concrets, pensés pour l’utilisateur et l’entreprise.</p>
-            <ul>
-                <li>💡 Code propre & maintenable</li>
-                <li>🎨 Sens du design & UX</li>
-                <li>🤝 Expérience sur projets d’équipe</li>
-            </ul>
-            <div class="about-stats">
-                <div class="stat-card">
-                    <h3>+3 ans</h3>
-                    <span>Expérience</span>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contactez-moi</h2>
+            <p class="section-subtitle">N'hésitez pas à me contacter pour discuter de votre projet ou pour toute question.</p>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" class="form-control" placeholder="votre nom et prénom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Adresse email</label>
+                            <input type="email" id="email" class="form-control" placeholder="votre email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <input type="text" id="subject" class="form-control" placeholder="message" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Envoyer le message</button>
+                    </form>
                 </div>
-                <div class="stat-card">
-                    <h3>10+</h3>
-                    <span>Projets réalisés</span>
-                </div>
-                <div class="stat-card">
-                    <h3>100%</h3>
-                    <span>Satisfaction client</span>
+                <div class="contact-info">
+                    <h3>Informations de contact</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Localisation</h4>
+                            <p>Paris, France</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>s.bonnet230906@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Téléphone</h4>
+                            <p>+33 6 12 34 56 78</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-    <!-- SKILLS -->
-<section id="skills" class="skills">
-  <h2>Compétences</h2>
-  <div class="carousel-container">
-    <div class="carousel-track">
-      <div class="skill-card">💻 HTML / CSS</div>
-      <div class="skill-card">⚡ JavaScript</div>
-      <div class="skill-card">⚛️ React / Vue</div>
-      <div class="skill-card">🖥️ Node.js</div>
-      <div class="skill-card">🗄️ SQL / NoSQL</div>
-      <div class="skill-card">☁️ DevOps / Cloud</div>
-      <!-- Duplicat pour effet infini -->
-      <div class="skill-card">💻 HTML / CSS</div>
-      <div class="skill-card">⚡ JavaScript</div>
-      <div class="skill-card">⚛️ React / Vue</div>
-      <div class="skill-card">🖥️ Node.js</div>
-      <div class="skill-card">🗄️ SQL / NoSQL</div>
-      <div class="skill-card">☁️ DevOps / Cloud</div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="projects">
-    <h2>Projets</h2>
-    <div class="projects-grid">
-        <article class="project-card">
-            <img src="https://via.placeholder.com/400x250" alt="Aperçu d'une plateforme SaaS">
-            <div class="project-info">
-                <h3>Crypto DashBoard</h3>
-                <p>Python - Flask</p>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">Samuel Bonnet</div>
+                    <p class="footer-about">Développeur full stack passionné par la création d'expériences digitales innovantes et performantes. Je transforme vos idées en réalité avec un code propre et des designs modernes.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/Samuel-BONNET"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/samuel-bonnet1"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Liens rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+                        <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> À propos</a></li>
+                        <li><a href="#skills"><i class="fas fa-chevron-right"></i> Compétences</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Abonnez-vous pour recevoir mes dernières actualités et projets.</p>
+                    <div class="newsletter">
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="Votre email">
+                            <button type="submit" class="newsletter-btn">S'abonner</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </article>
-        <article class="project-card">
-            <img src="https://via.placeholder.com/400x250" alt="Aperçu d'un site e-commerce">
-            <div class="project-info">
-                <h3>Monopoly</h3>
-                <p>Java - Spring</p>
+            <div class="copyright">
+                <p>&copy; 2025 Samuel Bonnet. Tous droits réservés.</p>
             </div>
-        </article>
-    </div>
-</section>
-
-
-        <!-- CONTACT -->
-        <section id="contact" class="contact">
-            <h2>Restons en contact</h2>
-            <p style="text-align: center;">Prêt à échanger ? 👇</p>
-            <div class="contact-links">
-                <a href="mailto:s.bonnet230906@gmail.com" class="btn-primary">📧 M'écrire un email</a>
-                <a href="https://www.linkedin.com/in/samuel-bonnet1" target="_blank" rel="noopener" class="btn-secondary">🔗 Mon LinkedIn</a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p>© 2025 Samuel | <a href="mailto:s.bonnet230906@gmail.com" style="color: white; text-decoration: none; font-weight: bold;">s.bonnet230906@gmail.com</a></p>
+        </div>
     </footer>
+
+    <!-- Modal Portfolio -->
+    <div class="portfolio-modal">
+        <div class="modal-content">
+            <div class="modal-close">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="modal-img">
+                <img src="" alt="Projet détaillé">
+            </div>
+            <div class="modal-info">
+                <h3></h3>
+                <p></p>
+                <div class="modal-tech"></div>
+                <div class="modal-links"></div>
+            </div>
+        </div>
+    </div>
+
+<script>
+   
+
+    // --- Navigation mobile ---
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const navItems = document.querySelectorAll('.nav-links a');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.querySelector('i').classList.toggle('fa-times');
+    });
+
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 100) header.classList.add('scrolled');
+        else header.classList.remove('scrolled');
+
+        // Active nav item
+        const sections = document.querySelectorAll('section');
+        let current = '';
+        sections.forEach(section => {
+            if (scrollY >= section.offsetTop - 100) current = section.getAttribute('id');
+        });
+        navItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href') === `#${current}`) item.classList.add('active');
+        });
+    });
+
+    // --- Observer pour animations ---
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+    }, observerOptions);
+
+    const contactObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) setTimeout(() => { entry.target.classList.add('visible'); }, index * 200);
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.contact-item').forEach(item => contactObserver.observe(item));
+    document.querySelectorAll('.contact-form').forEach(form => observer.observe(form));
+
+   // --- Portfolio ---
+const filterButtons = document.querySelectorAll('.filter-btn');
+const portfolioGrid = document.querySelector('.portfolio-grid');
+const portfolioModal = document.querySelector('.portfolio-modal');
+const modalClose = document.querySelector('.modal-close');
+
+// Données des projets avec plusieurs catégories
+const projects = [
+    {
+        id: 1,
+        title: "Pacman",
+        categories: ["java", "web", "design"], // Tableau de catégories
+        image: "./img/pacman.png",
+        description: "Un jeu pacman fonctionnel",
+        technologies: ["java","java-fx"],
+        links: [
+            { type: "demo", url: "#", icon: "fas fa-external-link-alt" },
+            { type: "github", url: "https://github.com/Samuel-BONNET/Pac-Man.git", icon: "fab fa-github" }
+        ],
+        size: "wide"
+    },
+    {
+        id: 2,
+        title: "Monopolyy",
+        categories: ["java", "web"],
+        image: "./img/monopoly.jpg",
+        description: "Jeu du Monopoly classique avec interface web multijoueur sur la meme machine ( pour le moment...)",
+        technologies: ["java","spring-boot","html","css","js"],
+        links: [
+            { type: "demo", url: "#", icon: "fas fa-external-link-alt" },
+            { type: "github", url: "https://github.com/Samuel-BONNET/Monopoly.git", icon: "fab fa-github" }
+        ],
+        size: "tall"
+    },
+    {
+        id: 3,
+        title: "Crypto Dashboard",
+        categories: ["web", "python"],
+        image: "./img/cryptomonnaie.jpg",
+        description: "Dashboard de cryptomonnaire rafraichi toutes les 5 sec avec prix actuel et graphique de 10 tokens différents !",
+        technologies: ["python","flask","html","css"],
+        links: [
+            { type: "demo", url: "#", icon: "fas fa-external-link-alt" },
+            { type: "github", url: "https://github.com/Samuel-BONNET/Crypto-Dashboard.git#", icon: "fab fa-github" }
+        ],
+        size: "normal"
+    },
+    {
+        id: 4,
+        title: "Sudoku Resolver",
+        categories: ["algorithme", "c"],
+        image: "./img/sudoku.jpg",
+        description: "Algorithme de résolution de sudoku basique en C",
+        technologies: ["C"],
+        links: [
+            { type: "demo", url: "#", icon: "fas fa-external-link-alt" },
+            { type: "github", url: "https://github.com/Samuel-BONNET/Sudoku-Resolver.git", icon: "fab fa-github" }
+        ],
+        size: "normal"
+    },
+    {
+        id: 5,
+        title: "Cine-Hub",
+        categories: ["web", "php", "laravel"],
+        image: "./img/cinehub.jpg",
+        description: "Projet universitaire de création d'un site de critique cinématographique.",
+        technologies: ["php","laravel","bootstrap","tailwind"],
+        links: [
+            { type: "demo", url: "#", icon: "fas fa-external-link-alt" },
+            { type: "github", url: "#", icon: "fab fa-github" }
+        ],
+        size: "wide"
+    },
+    {
+        id: 6,
+        title: "Prochain projet...",
+        categories: ["design"],
+        image: "./img/to-be-continued.jpg",
+        description: "Peut être un projet avec vous !",
+        technologies: [],
+        links: [],
+        size: "normal"
+    }
+];
+
+function initProjects() {
+    portfolioGrid.innerHTML = ''; // vide la grille
+    
+    projects.forEach(project => {
+        const projectElement = document.createElement('div');
+        projectElement.className = `portfolio-item ${project.size || ''}`;
+        // Stocke les catégories dans un attribut data (séparées par des virgules)
+        projectElement.setAttribute('data-categories', project.categories.join(','));
+        projectElement.setAttribute('data-id', project.id);
+
+        projectElement.innerHTML = `
+            <div class="portfolio-img">
+                <img src="${project.image}" alt="${project.title}">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-tech">${project.technologies.join(', ')}</div>
+                    <div class="portfolio-links">
+                        <a href="#" class="portfolio-link view-project" data-id="${project.id}">
+                            <i class="fas fa-eye"></i>
+                        </a>
+                        ${project.links.map(link => `
+                            <a href="${link.url}" class="portfolio-link" target="_blank">
+                                <i class="${link.icon}"></i>
+                            </a>
+                        `).join('')}
+                    </div>
+                </div>
+            </div>
+        `;
+
+        portfolioGrid.appendChild(projectElement);
+
+        // Modal click
+        projectElement.querySelector('.view-project').addEventListener('click', e => {
+            e.preventDefault();
+            openProjectModal(project.id);
+        });
+
+        // Animation d'apparition
+        setTimeout(() => {
+            projectElement.classList.add('visible');
+        }, 100);
+    });
+}
+
+function filterProjects(filter) {
+    console.log(`Filtre appliqué: ${filter}`);
+    
+    const allItems = document.querySelectorAll('.portfolio-item');
+    
+    allItems.forEach(item => {
+        const categories = item.getAttribute('data-categories').split(',');
+        
+        // Vérifie si le projet appartient à la catégorie filtrée
+        if (filter === 'all' || categories.includes(filter)) {
+            item.classList.remove('hidden');
+            item.style.display = 'block';
+        } else {
+            item.classList.add('hidden');
+            item.style.display = 'none';
+        }
+    });
+}
+
+function openProjectModal(projectId) {
+    const project = projects.find(p => p.id === projectId);
+    if (!project) return;
+
+    const modalImg = portfolioModal.querySelector('.modal-img img');
+    const modalTitle = portfolioModal.querySelector('.modal-info h3');
+    const modalDesc = portfolioModal.querySelector('.modal-info p');
+    const modalTech = portfolioModal.querySelector('.modal-tech');
+    const modalLinks = portfolioModal.querySelector('.modal-links');
+
+    modalImg.src = project.image;
+    modalImg.alt = project.title;
+    modalTitle.textContent = project.title;
+    modalDesc.textContent = project.description;
+
+    modalTech.innerHTML = '';
+    project.technologies.forEach(tech => {
+        const techEl = document.createElement('span');
+        techEl.textContent = tech;
+        modalTech.appendChild(techEl);
+    });
+
+    modalLinks.innerHTML = '';
+    project.links.forEach(link => {
+        const linkEl = document.createElement('a');
+        linkEl.href = link.url;
+        linkEl.className = 'btn';
+        linkEl.innerHTML = `<i class="${link.icon}"></i> ${link.type === 'demo' ? 'Voir le projet' : 'Code source'}`;
+        if (link.type === 'github') linkEl.classList.add('btn-outline');
+        linkEl.target = '_blank';
+        modalLinks.appendChild(linkEl);
+    });
+
+    portfolioModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+modalClose.addEventListener('click', () => {
+    portfolioModal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+});
+
+portfolioModal.addEventListener('click', e => {
+    if (e.target === portfolioModal) {
+        portfolioModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+});
+
+// --- Initialisation ---
+initProjects();
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        console.log('Bouton cliqué');
+        
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filterValue = button.getAttribute('data-filter');
+        filterProjects(filterValue);
+    });
+});
+
+// Debug: Affiche les catégories disponibles
+console.log('Catégories des projets:', projects.map(p => p.categories));
+
+
+    // --- Smooth scroll for anchor links ---
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({ top: targetElement.offsetTop - 80, behavior: 'smooth' });
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    hamburger.querySelector('i').classList.remove('fa-times');
+                }
+            }
+        });
+    });
+
+    // --- Forms ---
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', e => { e.preventDefault(); alert('Merci pour votre message !'); contactForm.reset(); });
+
+    const newsletterForm = document.querySelector('.newsletter-form');
+    newsletterForm.addEventListener('submit', e => { e.preventDefault(); alert('Merci pour votre abonnement !'); newsletterForm.reset(); });
+
+</script>
+
 </body>
 </html>
