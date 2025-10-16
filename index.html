@@ -64,19 +64,108 @@
             <div class="portfolio-filters">
                 <button class="filter-btn active" data-filter="all">Tous</button>
                 <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="java">Java</button>
-                <button class="filter-btn" data-filter="python">Python</button>
-                <button class="filter-btn" data-filter="php">PHP</button>
-                <button class="filter-btn" data-filter="algorithme">Algorithme</button>
-                <button class="filter-btn" data-filter="c">C</button>
-                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="back">Backend</button>
+                <button class="filter-btn" data-filter="algo">Algorithmie</button>
             </div>
             <div class="portfolio-grid">
-                <!-- Projets seront ajoutés dynamiquement -->
+                <div class="portfolio-item wide" data-categories="back" data-id="1">
+                    <div class="portfolio-img">
+                        <img src="./img/pacman.png" alt="Pacman">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-tech">java, java-fx</div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link view-project" data-id="1">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://github.com/Samuel-BONNET/Pac-Man.git" target="_blank" class="portfolio-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item tall" data-categories="back,web" data-id="2">
+                    <div class="portfolio-img">
+                        <img src="./img/monopoly.jpg" alt="Monopolyy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-tech">java, spring-boot, html, css, js</div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link view-project" data-id="2">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://github.com/Samuel-BONNET/Monopoly.git" target="_blank" class="portfolio-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-categories="back" data-id="3">
+                    <div class="portfolio-img">
+                        <img src="./img/cryptomonnaie.jpg" alt="Crypto Dashboard">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-tech">python, flask, html, css</div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link view-project" data-id="3">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://github.com/Samuel-BONNET/Crypto-Dashboard.git" target="_blank" class="portfolio-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-categories="algo" data-id="4">
+                    <div class="portfolio-img">
+                        <img src="./img/sudoku.jpg" alt="Sudoku Resolver">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-tech">C</div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link view-project" data-id="4">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://github.com/Samuel-BONNET/Sudoku-Resolver.git" target="_blank" class="portfolio-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item wide" data-categories="back" data-id="5">
+                    <div class="portfolio-img">
+                        <img src="./img/cinehub.jpg" alt="Cine-Hub">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-tech">php, laravel, bootstrap, tailwind</div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link view-project" data-id="5">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-categories="web,back,algo" data-id="6">
+                    <div class="portfolio-img">
+                        <img src="./img/to-be-continued.jpg" alt="Prochain projet...">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-tech"></div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link view-project" data-id="6">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
@@ -271,7 +360,7 @@
                         </div>
                         <div class="contact-details">
                             <h4>Localisation</h4>
-                            <p>Paris, France</p>
+                            <p>Lille, France</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -281,15 +370,6 @@
                         <div class="contact-details">
                             <h4>Email</h4>
                             <p>s.bonnet230906@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Téléphone</h4>
-                            <p>+33 6 12 34 56 78</p>
                         </div>
                     </div>
                 </div>
@@ -320,14 +400,6 @@
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Newsletter</h3>
-                    <p>Abonnez-vous pour recevoir mes dernières actualités et projets.</p>
-                    <div class="newsletter">
-                        <form class="newsletter-form">
-                            <input type="email" class="newsletter-input" placeholder="Votre email">
-                            <button type="submit" class="newsletter-btn">S'abonner</button>
-                        </form>
-                    </div>
                 </div>
             </div>
             <div class="copyright">
@@ -354,9 +426,7 @@
         </div>
     </div>
 
-<script>
-   
-
+  <script>
     // --- Navigation mobile ---
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
@@ -372,277 +442,150 @@
         if (window.scrollY > 100) header.classList.add('scrolled');
         else header.classList.remove('scrolled');
 
-        // Active nav item
-        const sections = document.querySelectorAll('section');
         let current = '';
-        sections.forEach(section => {
-            if (scrollY >= section.offsetTop - 100) current = section.getAttribute('id');
+        document.querySelectorAll('section').forEach(section => {
+            if (window.scrollY >= section.offsetTop - 100) current = section.id;
         });
+
         navItems.forEach(item => {
-            item.classList.remove('active');
-            if (item.getAttribute('href') === `#${current}`) item.classList.add('active');
+            item.classList.toggle('active', item.getAttribute('href') === `#${current}`);
         });
     });
 
     // --- Observer pour animations ---
-    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) entry.target.classList.add('visible');
         });
-    }, observerOptions);
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-    const contactObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) setTimeout(() => { entry.target.classList.add('visible'); }, index * 200);
+    document.querySelectorAll('.contact-item, .contact-form').forEach(el => observer.observe(el));
+
+    // --- Portfolio ---
+    const portfolioModal = document.querySelector('.portfolio-modal');
+    const modalClose = document.querySelector('.modal-close');
+        // --- Portfolio Filtrage ---
+    // --- Portfolio Filtrage ---
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    const portfolioGrid = document.querySelector('.portfolio-grid');
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Animation du bouton actif
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const filter = btn.dataset.filter;
+            
+            // Désactiver les interactions pendant l'animation
+            portfolioGrid.style.pointerEvents = 'none';
+            
+            // Étape 1: Faire disparaître les éléments qui ne correspondent pas
+            portfolioItems.forEach(item => {
+                const categories = (item.dataset.categories || '').split(',').map(c => c.trim());
+                const shouldShow = filter === 'all' || categories.includes(filter);
+                
+                if (!shouldShow) {
+                    item.classList.remove('visible');
+                    item.classList.add('hidden');
+                }
+            });
+            
+            // Étape 2: Après la disparition, réorganiser l'affichage
+            setTimeout(() => {
+                portfolioItems.forEach(item => {
+                    const categories = (item.dataset.categories || '').split(',').map(c => c.trim());
+                    const shouldShow = filter === 'all' || categories.includes(filter);
+                    
+                    if (shouldShow) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Étape 3: Faire apparaître les éléments correspondants
+                setTimeout(() => {
+                    portfolioItems.forEach(item => {
+                        const categories = (item.dataset.categories || '').split(',').map(c => c.trim());
+                        const shouldShow = filter === 'all' || categories.includes(filter);
+                        
+                        if (shouldShow) {
+                            item.classList.remove('hidden');
+                            item.classList.add('visible');
+                        }
+                    });
+                    
+                    // Réactiver les interactions
+                    setTimeout(() => {
+                        portfolioGrid.style.pointerEvents = 'auto';
+                    }, 300);
+                    
+                }, 50);
+            }, 400); // Temps correspondant à la durée de disparition
         });
-    }, observerOptions);
+    });
 
-    document.querySelectorAll('.contact-item').forEach(item => contactObserver.observe(item));
-    document.querySelectorAll('.contact-form').forEach(form => observer.observe(form));
-
-   // --- Portfolio ---
-const filterButtons = document.querySelectorAll('.filter-btn');
-const portfolioGrid = document.querySelector('.portfolio-grid');
-const portfolioModal = document.querySelector('.portfolio-modal');
-const modalClose = document.querySelector('.modal-close');
-
-// Données des projets avec plusieurs catégories
-const projects = [
-    {
-        id: 1,
-        title: "Pacman",
-        categories: ["java", "web", "design"], // Tableau de catégories
-        image: "./img/pacman.png",
-        description: "Un jeu pacman fonctionnel",
-        technologies: ["java","java-fx"],
-        links: [
-            { type: "demo", url: "#", icon: "fas fa-external-link-alt" },
-            { type: "github", url: "https://github.com/Samuel-BONNET/Pac-Man.git", icon: "fab fa-github" }
-        ],
-        size: "wide"
-    },
-    {
-        id: 2,
-        title: "Monopolyy",
-        categories: ["java", "web"],
-        image: "./img/monopoly.jpg",
-        description: "Jeu du Monopoly classique avec interface web multijoueur sur la meme machine ( pour le moment...)",
-        technologies: ["java","spring-boot","html","css","js"],
-        links: [
-            { type: "demo", url: "#", icon: "fas fa-external-link-alt" },
-            { type: "github", url: "https://github.com/Samuel-BONNET/Monopoly.git", icon: "fab fa-github" }
-        ],
-        size: "tall"
-    },
-    {
-        id: 3,
-        title: "Crypto Dashboard",
-        categories: ["web", "python"],
-        image: "./img/cryptomonnaie.jpg",
-        description: "Dashboard de cryptomonnaire rafraichi toutes les 5 sec avec prix actuel et graphique de 10 tokens différents !",
-        technologies: ["python","flask","html","css"],
-        links: [
-            { type: "demo", url: "#", icon: "fas fa-external-link-alt" },
-            { type: "github", url: "https://github.com/Samuel-BONNET/Crypto-Dashboard.git#", icon: "fab fa-github" }
-        ],
-        size: "normal"
-    },
-    {
-        id: 4,
-        title: "Sudoku Resolver",
-        categories: ["algorithme", "c"],
-        image: "./img/sudoku.jpg",
-        description: "Algorithme de résolution de sudoku basique en C",
-        technologies: ["C"],
-        links: [
-            { type: "demo", url: "#", icon: "fas fa-external-link-alt" },
-            { type: "github", url: "https://github.com/Samuel-BONNET/Sudoku-Resolver.git", icon: "fab fa-github" }
-        ],
-        size: "normal"
-    },
-    {
-        id: 5,
-        title: "Cine-Hub",
-        categories: ["web", "php", "laravel"],
-        image: "./img/cinehub.jpg",
-        description: "Projet universitaire de création d'un site de critique cinématographique.",
-        technologies: ["php","laravel","bootstrap","tailwind"],
-        links: [
-            { type: "demo", url: "#", icon: "fas fa-external-link-alt" },
-            { type: "github", url: "#", icon: "fab fa-github" }
-        ],
-        size: "wide"
-    },
-    {
-        id: 6,
-        title: "Prochain projet...",
-        categories: ["design"],
-        image: "./img/to-be-continued.jpg",
-        description: "Peut être un projet avec vous !",
-        technologies: [],
-        links: [],
-        size: "normal"
-    }
-];
-
-function initProjects() {
-    portfolioGrid.innerHTML = ''; // vide la grille
-    
-    projects.forEach(project => {
-        const projectElement = document.createElement('div');
-        projectElement.className = `portfolio-item ${project.size || ''}`;
-        // Stocke les catégories dans un attribut data (séparées par des virgules)
-        projectElement.setAttribute('data-categories', project.categories.join(','));
-        projectElement.setAttribute('data-id', project.id);
-
-        projectElement.innerHTML = `
-            <div class="portfolio-img">
-                <img src="${project.image}" alt="${project.title}">
-                <div class="portfolio-overlay">
-                    <div class="portfolio-tech">${project.technologies.join(', ')}</div>
-                    <div class="portfolio-links">
-                        <a href="#" class="portfolio-link view-project" data-id="${project.id}">
-                            <i class="fas fa-eye"></i>
-                        </a>
-                        ${project.links.map(link => `
-                            <a href="${link.url}" class="portfolio-link" target="_blank">
-                                <i class="${link.icon}"></i>
-                            </a>
-                        `).join('')}
-                    </div>
-                </div>
-            </div>
-        `;
-
-        portfolioGrid.appendChild(projectElement);
-
-        // Modal click
-        projectElement.querySelector('.view-project').addEventListener('click', e => {
+    // --- Modal ---
+    document.querySelectorAll('.view-project').forEach(link => {
+        link.addEventListener('click', e => {
             e.preventDefault();
-            openProjectModal(project.id);
+            const id = link.dataset.id;
+            const project = document.querySelector(`.portfolio-item[data-id="${id}"]`);
+            if (!project) return;
+
+            portfolioModal.querySelector('.modal-img img').src = project.querySelector('img').src;
+            portfolioModal.querySelector('.modal-info h3').textContent = project.querySelector('img').alt || "Projet";
+            portfolioModal.querySelector('.modal-tech').textContent = project.querySelector('.portfolio-tech')?.textContent || "";
+            portfolioModal.querySelector('.modal-links').innerHTML = project.querySelector('.portfolio-links')?.innerHTML || "";
+
+            portfolioModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
         });
-
-        // Animation d'apparition
-        setTimeout(() => {
-            projectElement.classList.add('visible');
-        }, 100);
-    });
-}
-
-function filterProjects(filter) {
-    console.log(`Filtre appliqué: ${filter}`);
-    
-    const allItems = document.querySelectorAll('.portfolio-item');
-    
-    allItems.forEach(item => {
-        const categories = item.getAttribute('data-categories').split(',');
-        
-        // Vérifie si le projet appartient à la catégorie filtrée
-        if (filter === 'all' || categories.includes(filter)) {
-            item.classList.remove('hidden');
-            item.style.display = 'block';
-        } else {
-            item.classList.add('hidden');
-            item.style.display = 'none';
-        }
-    });
-}
-
-function openProjectModal(projectId) {
-    const project = projects.find(p => p.id === projectId);
-    if (!project) return;
-
-    const modalImg = portfolioModal.querySelector('.modal-img img');
-    const modalTitle = portfolioModal.querySelector('.modal-info h3');
-    const modalDesc = portfolioModal.querySelector('.modal-info p');
-    const modalTech = portfolioModal.querySelector('.modal-tech');
-    const modalLinks = portfolioModal.querySelector('.modal-links');
-
-    modalImg.src = project.image;
-    modalImg.alt = project.title;
-    modalTitle.textContent = project.title;
-    modalDesc.textContent = project.description;
-
-    modalTech.innerHTML = '';
-    project.technologies.forEach(tech => {
-        const techEl = document.createElement('span');
-        techEl.textContent = tech;
-        modalTech.appendChild(techEl);
     });
 
-    modalLinks.innerHTML = '';
-    project.links.forEach(link => {
-        const linkEl = document.createElement('a');
-        linkEl.href = link.url;
-        linkEl.className = 'btn';
-        linkEl.innerHTML = `<i class="${link.icon}"></i> ${link.type === 'demo' ? 'Voir le projet' : 'Code source'}`;
-        if (link.type === 'github') linkEl.classList.add('btn-outline');
-        linkEl.target = '_blank';
-        modalLinks.appendChild(linkEl);
-    });
-
-    portfolioModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-modalClose.addEventListener('click', () => {
-    portfolioModal.classList.remove('active');
-    document.body.style.overflow = 'auto';
-});
-
-portfolioModal.addEventListener('click', e => {
-    if (e.target === portfolioModal) {
+    modalClose.addEventListener('click', () => {
         portfolioModal.classList.remove('active');
         document.body.style.overflow = 'auto';
-    }
-});
-
-// --- Initialisation ---
-initProjects();
-
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        console.log('Bouton cliqué');
-        
-        // Remove active class from all buttons
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-
-        const filterValue = button.getAttribute('data-filter');
-        filterProjects(filterValue);
     });
-});
 
-// Debug: Affiche les catégories disponibles
-console.log('Catégories des projets:', projects.map(p => p.categories));
+    portfolioModal.addEventListener('click', e => {
+        if (e.target === portfolioModal) {
+            portfolioModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
 
-
-    // --- Smooth scroll for anchor links ---
+    // --- Smooth scroll ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', e => {
             e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                window.scrollTo({ top: targetElement.offsetTop - 80, behavior: 'smooth' });
-                if (navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                    hamburger.querySelector('i').classList.remove('fa-times');
-                }
+            const target = document.querySelector(anchor.getAttribute('href'));
+            if (target) window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                hamburger.querySelector('i').classList.remove('fa-times');
             }
         });
     });
 
     // --- Forms ---
     const contactForm = document.getElementById('contactForm');
-    contactForm.addEventListener('submit', e => { e.preventDefault(); alert('Merci pour votre message !'); contactForm.reset(); });
+    contactForm?.addEventListener('submit', e => {
+        e.preventDefault();
+        alert('Merci pour votre message !');
+        contactForm.reset();
+    });
 
-    const newsletterForm = document.querySelector('.newsletter-form');
-    newsletterForm.addEventListener('submit', e => { e.preventDefault(); alert('Merci pour votre abonnement !'); newsletterForm.reset(); });
-
+    // --- Initialisation : rend tous les projets visibles ---
+    window.addEventListener('DOMContentLoaded', () => {
+        portfolioItems.forEach(item => item.classList.add('visible'));
+    });
 </script>
+
+
+
 
 </body>
 </html>

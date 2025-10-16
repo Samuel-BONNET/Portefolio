@@ -366,6 +366,7 @@ header.scrolled .navbar {
 .portfolio {
     background-color: var(--dark-light);
     position: relative;
+    transition: height 0.4s ease;
 }
 
 .portfolio::before {
@@ -394,16 +395,37 @@ header.scrolled .navbar {
     border: 1px solid var(--darker-light);
     border-radius: 50px;
     cursor: pointer;
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     color: var(--gray-color);
     font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0);
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: 0.6s;
 }
 
 .filter-btn.active, .filter-btn:hover {
     background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
     color: white;
     border-color: var(--primary-color);
-    box-shadow: var(--shadow-light);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(58, 134, 255, 0.2);
+}
+
+.filter-btn.active {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(58, 134, 255, 0.3);
+    animation: pulse-active 2s infinite;
 }
 
 .portfolio-grid {
@@ -411,6 +433,7 @@ header.scrolled .navbar {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 25px;
     grid-auto-rows: 250px;
+    transition: grid-template-rows 0.4s ease, gap 0.4s ease;
 }
 
 .portfolio-item {
@@ -420,10 +443,27 @@ header.scrolled .navbar {
     transition: var(--transition);
     background: var(--dark-color);
     position: relative;
-    opacity: 0;
-    transform: translateY(30px);
+    opacity: 1;
+    transform: scale(1) translateY(0);
     cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     grid-row: span 1;
+}
+
+.portfolio-item.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+    grid-row: span 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+.portfolio-item.visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
 }
 
 .portfolio-item.wide {
@@ -1205,6 +1245,8 @@ footer::before {
     }
 }
 
+
+
 @media (max-width: 992px) {
     h1 {
         font-size: 3rem;
@@ -1212,6 +1254,16 @@ footer::before {
     
     h2 {
         font-size: 2.2rem;
+    }
+
+    .portfolio-item.wide, .portfolio-item.tall {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 300px;
     }
     
     .about-content, .contact-container {
@@ -1347,4 +1399,21 @@ footer::before {
     .newsletter-form {
         flex-direction: column;
     }
+}
+
+/* Animation de pulse pour les boutons actifs */
+@keyframes pulse-active {
+    0% {
+        box-shadow: 0 8px 25px rgba(58, 134, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 8px 25px rgba(58, 134, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 8px 25px rgba(58, 134, 255, 0.3);
+    }
+}
+
+.filter-btn.active {
+    animation: pulse-active 2s infinite;
 }
